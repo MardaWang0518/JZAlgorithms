@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="algorithm"
+            type="com.juwan.jzalgorithms.model.Algorithm"/>
+        <variable
+            name="algorithmViewHolder"
+            type="com.juwan.jzalgorithms.ui.AlgorithmsListAdapter.AlgorithmsViewHolder"/>
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:onClick="@{algorithmViewHolder::onItemClicked}"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/algorithms_list_item_height">
+
+        <TextView
+            android:id="@+id/name"
+            android:text="@{algorithm.name}"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>
