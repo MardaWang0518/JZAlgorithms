@@ -35,4 +35,15 @@ public class MainActivity extends AppCompatActivity {
         mAlgorithmsListAdapter.replaceContent(algorithmses);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        main();
+    }
+
+    static {
+        System.loadLibrary("native-lib");
+    }
+
+    public native void main();
 }
